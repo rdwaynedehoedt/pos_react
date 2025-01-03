@@ -44,7 +44,6 @@ function LoginPage() {
         event.preventDefault();
         if (validateForm()) {
             console.log('Login Submitted:', email, password);
-            // Here you would usually handle the login logic, perhaps sending data to a server
         }
     };
 
