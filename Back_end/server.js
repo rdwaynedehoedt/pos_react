@@ -19,11 +19,11 @@ app.listen(PORT, () => {
 app.post('/register', async (req, res) => {
     try {
         const { username, email, password } = req.body;
-
         const hashedPassword = await bcrypt.hash(password, 10);
-
         res.status(201).json({ message: 'User registered', username, email });
     } catch (error) {
+        console.error('Registration error:', error);
         res.status(500).json({ message: 'Error registering user' });
     }
 });
+
