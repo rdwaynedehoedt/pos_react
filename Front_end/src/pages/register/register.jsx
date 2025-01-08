@@ -17,7 +17,7 @@ function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();  // Prevents the default form submission behavior (reloading the page)
         try {
-            // Sending the user data to the backend
+
             const response = await fetch('http://localhost:3000/register', {
                 method: 'POST',
                 headers: {
